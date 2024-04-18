@@ -2,16 +2,26 @@
 
 This repository contains a console application project designed to convert third-party reports into DevExpress Report Definition (.REPX) files. You can use these .REPX files to [load report layouts](https://docs.devexpress.com/XtraReports/2666/detailed-guide-to-devexpress-reporting/store-and-distribute-reports/store-report-layouts-and-documents/load-report-layouts) within the DevExpress Visual Studio Report Designer, DevExpress End-User Report Designer, or display the report at runtime.
 
-# Project Specifics
+# How to Compile and Run the Project
 
 > _This report conversion tool is limited in scope (due to differences between DevExpress Reports and other reporting tools). Review the [requirements and limitations](https://docs.devexpress.com/XtraReports/1468/get-started-with-devexpress-reporting/add-a-report-to-your-.net-application/convert-third-party-reports-to-devexpress-reports#requirements) related to this product before you convert reports._
 > 
 > _This project intentionally does not contain third-party libraries. To compile the application, add references to required assemblies._
 
-You can modify the following options in project properties:
+## Prerequisites
 
- *	The **Build** Tab’s **Conditional compilation symbols** specifies the list of all supported third-party suppliers (all are enabled by default);
- *	The **Debug** tab allows you to specify **Command line arguments**. These arguments determine input and output files (the **in** and **out** parameters). If the source or destination file is stored within the application’s root folder, specify the file's name. Otherwise, specify the full path to the file.
+1. This project references the [Crystal Reports](https://www.sap.com/products/technology-platform/crystal-reports.html) and [Active Reports](https://developer.mescius.com/activereports) libraries. You must install the libraries yourself. Please note that third-party libraries must be installed and used in accordance with the relevant license agreement.
+
+## Configuration
+
+1. Specify library vendors in the **Build** Tab’s **Conditional compilation symbols** field. Initially it has the list of all supported third-party suppliers (all are enabled by default). Delete unnecessary names from the list.
+
+    ![Conditional compilation symbols](images/conditional-compilation-symbols.png)
+
+ 1. Open the **Debug** tab and specify the input and output file names (the **in** and **out** parameters) in the  **Command line arguments**:
+
+
+    ![](images/command-line-arguments.png)
 
 # Examples of use
 
