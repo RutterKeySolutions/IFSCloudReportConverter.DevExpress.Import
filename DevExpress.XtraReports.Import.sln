@@ -1,31 +1,49 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpress.XtraReports.Import", "DevExpress.XtraReports.Import.csproj", "{7F11156F-DE34-4101-BA74-E718F65A51BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug_Access|Any CPU = Debug_Access|Any CPU
+		Debug_Access|x64 = Debug_Access|x64
 		Debug_Active|Any CPU = Debug_Active|Any CPU
+		Debug_Active|x64 = Debug_Active|x64
 		Debug_Crystal|Any CPU = Debug_Crystal|Any CPU
+		Debug_Crystal|x64 = Debug_Crystal|x64
 		Debug_SSRS|Any CPU = Debug_SSRS|Any CPU
+		Debug_SSRS|x64 = Debug_SSRS|x64
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_Access|Any CPU.ActiveCfg = Debug_Access|Any CPU
 		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_Access|Any CPU.Build.0 = Debug_Access|Any CPU
+		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_Access|x64.ActiveCfg = Debug_Access|x64
+		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_Access|x64.Build.0 = Debug_Access|x64
 		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_Active|Any CPU.ActiveCfg = Debug_Active|Any CPU
 		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_Active|Any CPU.Build.0 = Debug_Active|Any CPU
+		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_Active|x64.ActiveCfg = Debug_Active|x64
+		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_Active|x64.Build.0 = Debug_Active|x64
 		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_Crystal|Any CPU.ActiveCfg = Debug_Crystal|Any CPU
 		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_Crystal|Any CPU.Build.0 = Debug_Crystal|Any CPU
+		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_Crystal|x64.ActiveCfg = Debug_Crystal|x64
+		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_Crystal|x64.Build.0 = Debug_Crystal|x64
 		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_SSRS|Any CPU.ActiveCfg = Debug_SSRS|Any CPU
 		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_SSRS|Any CPU.Build.0 = Debug_SSRS|Any CPU
+		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_SSRS|x64.ActiveCfg = Debug_SSRS|x64
+		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug_SSRS|x64.Build.0 = Debug_SSRS|x64
 		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug|x64.ActiveCfg = Debug|x64
+		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Debug|x64.Build.0 = Debug|x64
 		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Release|x64.ActiveCfg = Release|x64
+		{7F11156F-DE34-4101-BA74-E718F65A51BD}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
