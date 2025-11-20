@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevExpress.XtraReports.Import.Services {
     internal sealed class ReportConverterService : IReportConverterService {
@@ -15,10 +14,18 @@ namespace DevExpress.XtraReports.Import.Services {
             get { return _lazyInstance.Value; }
         }
 
-        public void ConvertCrystalReport(string sourcePath, string destinationPath) {
+        public Exception ConvertCrystalReport(string sourcePath, string destinationPath, Dictionary<string, string> argDictionary, TraceListener traceListener) {
+            return ConvertReport(sourcePath, destinationPath, argDictionary, traceListener);
+        }
+
+        public Exception ConvertSsrsReport(string sourcePath, string destinationPath, Dictionary<string, string> argDictionary, TraceListener traceListener) {
+            return ConvertReport(sourcePath, destinationPath, argDictionary, traceListener);
+        }
+
+        private static Exception ConvertReport(string sourcePath, string destinationPath, Dictionary<string, string> argDictionary, TraceListener traceListener) {
             try {
-                ConfigureTracer();
-                ConverterBase converter = CreateConverter(Path.GetExtension(sourcePath), new Dictionary<string, string>(), destinationPath);
+                ConfigureTracer(traceListener);
+                ConverterBase converter = CreateConverter(Path.GetExtension(sourcePath), argDictionary, destinationPath);
                 ConversionResult conversionResult = converter.Convert(sourcePath);
                 conversionResult.TargetReport.SaveLayoutToXml(destinationPath);
             } catch (Exception ex) {
@@ -28,8 +35,11 @@ namespace DevExpress.XtraReports.Import.Services {
                     Console.WriteLine();
                 }
                 WriteInfo();
+                return ex;
             }
+            return null;
         }
+
         static void WriteInfo() {
             string[] infos = new string[] {
                     "Imports report files of different types into an XtaReport class file.\r\n",
@@ -132,10 +142,9 @@ namespace DevExpress.XtraReports.Import.Services {
                 .ToDictionary(x => x[0], x => x.Length == 2 ? x[1] : null, StringComparer.OrdinalIgnoreCase);
             return subArgDictionary;
         }
-        static void ConfigureTracer() {
-            var traceSource = XtraPrinting.Tracer.GetSource("DXperience.Reporting", System.Diagnostics.SourceLevels.Error | System.Diagnostics.SourceLevels.Warning);
-            var listener = new System.Diagnostics.ConsoleTraceListener();
-            traceSource.Listeners.Add(listener);
+        static void ConfigureTracer(TraceListener listener) {
+            var traceSource = XtraPrinting.Tracer.GetSource("DXperience.Reporting", SourceLevels.Error | SourceLevels.Warning);
+            traceSource.Listeners.Add(listener == null ? new ConsoleTraceListener() : listener);
         }
         static void Converter_SubreportGenerated(string outputFile, CrystalConverterSubreportGeneratedEventArgs e) {
             var subreportFile = Path.Combine(
