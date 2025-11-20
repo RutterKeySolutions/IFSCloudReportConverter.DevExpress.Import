@@ -10,7 +10,7 @@
     <AssemblyName>ReportsImport</AssemblyName>
     <OutputType>Exe</OutputType>
     <RootNamespace>DevExpress.XtraReports.Import</RootNamespace>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <LangVersion>6</LangVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
