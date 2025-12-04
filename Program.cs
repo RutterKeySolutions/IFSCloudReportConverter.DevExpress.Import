@@ -29,7 +29,7 @@ namespace DevExpress.XtraReports.Import {
                 Console.WriteLine(ex.GetBaseException().Message + Environment.NewLine);
                 Console.WriteLine();
                 if(!(ex is ArgumentCommandLineException)) {
-                    Console.WriteLine("As an alternative, you can create this layout in the Report Designer. See https://docs.devexpress.com/XtraReports/14651/get-started-with-devexpress-reporting for more information.");
+                    Console.WriteLine("As an alternative, you can create this layout in the Report Designer."/* See https://docs.devexpress.com/XtraReports/14651/get-started-with-devexpress-reporting for more information."*/);
                     Console.WriteLine();
                 }
                 WriteInfo();

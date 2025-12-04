@@ -51,7 +51,7 @@
             ExpressionParser_NotSupportedAggregate_Format = "Not supported '{0}' aggregate function.",
             ExpressionParser_FunctionSingleArgument_Format = "The '{0}' function should have a single argument.",
             ExpressionParser_IifOddArguments_Format = "The 'Iif' function should contain an odd number of arguments.",
-            ExpressionParser_Code_NotSupported = "Cannot convert code members for expressions. Implement the '{0}' user-defined function to support this behavior in reports. See [the documentation]( https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Expressions.CustomFunctions.Register(DevExpress.Data.Filtering.ICustomFunctionOperator--)) for details.",
+            ExpressionParser_Code_NotSupported = "Cannot convert code members for expressions. Implement the '{0}' user-defined function to support this behavior in reports."/* See [the documentation]( https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Expressions.CustomFunctions.Register(DevExpress.Data.Filtering.ICustomFunctionOperator--)) for details."*/,
             ExpressionParser_BuiltInCollection_NotSupported_Format = "The '{0}!' collection could not be converted.",
             ExpressionParser_Field_NotSupported_Format = "The '.{0}' field could not be converted.",
             ExpressionParser_GlobalField_NotSupported_Format = "The 'Global.{0}' built-in field could not be converted.",
