@@ -34,7 +34,6 @@ namespace DevExpress.XtraReports.Import.Services {
                 if (!(ex is ArgumentCommandLineException)) {
                     Console.WriteLine();
                 }
-                WriteInfo();
                 return ex;
             }
             return null;
