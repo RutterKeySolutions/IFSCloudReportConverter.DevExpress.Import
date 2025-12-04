@@ -143,7 +143,7 @@ namespace DevExpress.XtraReports.Import.Services {
             return subArgDictionary;
         }
         static void ConfigureTracer(TraceListener listener) {
-            var traceSource = XtraPrinting.Tracer.GetSource("DXperience.Reporting", SourceLevels.Error | SourceLevels.Warning);
+            var traceSource = XtraPrinting.Tracer.GetSource("Reporting.Converter", SourceLevels.Error | SourceLevels.Warning);
             traceSource.Listeners.Add(listener == null ? new ConsoleTraceListener() : listener);
         }
         static void Converter_SubreportGenerated(string outputFile, CrystalConverterSubreportGeneratedEventArgs e) {
