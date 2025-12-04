@@ -150,7 +150,7 @@ namespace DevExpress.XtraReports.Import {
             return subArgDictionary;
         }
         static void ConfigureTracer() {
-            var traceSource = XtraPrinting.Tracer.GetSource("DXperience.Reporting", System.Diagnostics.SourceLevels.Error | System.Diagnostics.SourceLevels.Warning);
+            var traceSource = XtraPrinting.Tracer.GetSource("Reporting.Converter", System.Diagnostics.SourceLevels.Error | System.Diagnostics.SourceLevels.Warning);
             var listener = new System.Diagnostics.ConsoleTraceListener();
             traceSource.Listeners.Add(listener);
         }
