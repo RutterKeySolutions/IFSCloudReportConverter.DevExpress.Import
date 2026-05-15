@@ -630,6 +630,9 @@ namespace DevExpress.XtraReports.Import {
                 SqlQuery sqlQuery = queryDefinition.Key;
                 if(dataSourceQueryDefinition.Item2 != null)
                     sqlQueriesByCrystalTableNames[dataSourceQueryDefinition.Item2.Name] = Tuple.Create(sqlDataSource, sqlQuery);
+                if(sqlDataSource.Queries.ContainsName(sqlQuery.Name)) {
+                   sqlQuery.Name = sqlQuery.Name + "_1";
+                }               
                 schemaProvider.AddView(sqlQuery.Name, dataSourceQueryDefinition.Item1);
                 sqlDataSource.Queries.Add(sqlQuery);
             }
